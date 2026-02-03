@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شكراً لك | Thank You</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- Simple Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Nova Market"
+                    style="height: 40px; display: inline-block; vertical-align: middle;">
+                <span style="vertical-align: middle;">NOVA<span class="logo__dot"></span> MARKET</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="container section">
+
+        <!-- Success Message -->
+        <div class="success-message">
+            <div class="success-icon-wrapper">
+                <i class="ph ph-check-circle"></i>
+            </div>
+            <h1 class="success-title" data-i18n="success_title">لقد تم استلام طلبك بنجاح!</h1>
+            <p class="success-desc" data-i18n="success_desc">سنقوم بالتواصل معك قريباً لتأكيد الطلب وشحنه.</p>
+            <a href="index.html" class="btn btn--primary" data-i18n="continue_shopping">متابعة التسوق</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Other Products -->
+        <section class="products">
+            <div class="section-header center-text">
+                <h2 class="section-title" data-i18n="other_products">منتجات قد تعجبك</h2>
+            </div>
+            <div id="product-grid" class="product-grid">
+                <!-- Products injected by JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__copy">&copy; 2026 Anaqah Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

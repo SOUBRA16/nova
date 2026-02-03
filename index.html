@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر نوفا | nova Store</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css?v=2.1">
+
+    <!-- Icons (Phosphor Icons for a modern look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body class="home-page">
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-bar__content">
+            <span data-i18n="top_bar_msg">توصيل مجاني للطلبات التي تزيد عن 5000 دج 🚚</span>
+        </div>
+    </div>
+
+    <!-- Simple Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Nova Market"
+                    style="height: 40px; display: inline-block; vertical-align: middle;">
+                <span style="vertical-align: middle;">NOVA<span class="logo__dot"></span> MARKET</span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active" data-i18n="home">الرئيسية</a></li>
+                    <li><a href="#physical-grid" class="nav__link" data-i18n="nav_physical">المنتجات العامة</a></li>
+                    <li><a href="#digital-grid" class="nav__link" data-i18n="nav_digital">المنتجات الرقمية</a></li>
+                    <li><a href="#about" class="nav__link" data-i18n="about">من نحن</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button id="lang-toggle" class="btn btn--icon" aria-label="Toggle Language">
+                    <span class="lang-text">EN</span>
+                </button>
+                <button class="btn btn--icon cart-btn" aria-label="Cart">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <span class="hero__subtitle" data-i18n="hero_subtitle">موسم جديد، أسلوب جديد</span>
+                <h1 class="hero__title" data-i18n="hero_title">اكتشف الفرق في <br> كل تفصيل.</h1>
+                <p class="hero__desc" data-i18n="hero_desc">تصاميم عصرية تجمع بين الراحة والفخامة لتناسب أسلوب حياتك
+                    المميز.</p>
+                <a href="#products" class="btn btn--primary" data-i18n="shop_now">تسوق الآن</a>
+            </div>
+            <div class="hero__image-wrapper">
+                <img src="c:\Users\admin\Downloads\تخ.png"
+                    alt="New Collection" class="hero__image">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Products Section -->
+    <section id="products" class="section products">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title" data-i18n="section_physical">منتجات عامة</h2>
+                <p class="section__subtitle" data-i18n="subtitle_physical">إلكترونيات، إكسسوارات وغيرها</p>
+            </div>
+            <div id="physical-grid" class="product-grid" style="margin-bottom: 4rem;"></div>
+
+            <!-- Promo Banner -->
+            <div class="promo-banner">
+                <div class="promo-content">
+                    <h2 data-i18n="promo_title">عروض حصرية لفترة محدودة</h2>
+                    <p data-i18n="promo_desc">احصل على خصم 20% على جميع المنتجات الرقمية هذا الأسبوع.</p>
+                    <a href="#digital-grid" class="btn btn--primary" data-i18n="shop_now">اكتشف العروض</a>
+                </div>
+            </div>
+
+            <div class="section__header">
+                <h2 class="section__title" data-i18n="section_digital">منتجات رقمية</h2>
+                <p class="section__subtitle" data-i18n="subtitle_digital">كتب، دورات، وأدوات رقمية</p>
+            </div>
+            <div id="digital-grid" class="product-grid"></div>
+        </div>
+    </section>
+
+    <!-- About/Features Section -->
+    <section id="about" class="section features">
+        <div class="container features__container">
+            <div class="feature-card">
+                <i class="ph ph-medal feature__icon"></i>
+                <h3 data-i18n="quality_title">جودة عالية</h3>
+                <p data-i18n="quality_desc">مواد فاخرة وتصنيع دقيق لضمان أفضل تجربة.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph ph-truck feature__icon"></i>
+                <h3 data-i18n="shipping_title">شحن سريع</h3>
+                <p data-i18n="shipping_desc">توصيل آمن وسريع لجميع المناطق.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph ph-shield-check feature__icon"></i>
+                <h3 data-i18n="payment_title">دفع آمن</h3>
+                <p data-i18n="payment_desc">وسائل دفع متعددة ومشفرة بالكامل.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter">
+        <div class="container newsletter__container">
+            <h2 class="newsletter__title" data-i18n="newsletter_title">اشترك في نشرتنا البريدية</h2>
+            <p class="newsletter__desc" data-i18n="newsletter_desc">كن أول من يعرف عن المنتجات الجديدة والعروض الحصرية.
+            </p>
+            <form class="newsletter__form" onsubmit="event.preventDefault(); alert('شكراً لاشتراكك!');">
+                <input type="email" placeholder="بريدك الإلكتروني" required>
+                <button type="submit" class="btn btn--primary" data-i18n="subscribe">اشترك</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__col">
+                    <a href="#" class="logo logo--footer">NOVA MARKET</a>
+                    <p class="footer__text" data-i18n="footer_desc">المتجر الرائد في عالم الموضة والأناقة العصرية.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 data-i18n="links">روابط</h4>
+                    <ul class="footer__links">
+                        <li><a href="#" data-i18n="privacy">سياسة الخصوصية</a></li>
+                        <li><a href="#" data-i18n="terms">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Argane Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2.1"></script>
+    </script>
+</body>
+
+</html>

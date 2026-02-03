@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الطلب | Complete Order</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css?v=2.1">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body class="product-page-body">
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-bar__content">
+            <span data-i18n="top_bar_msg">توصيل مجاني للطلبات التي تزيد عن 5000 دج 🚚</span>
+        </div>
+    </div>
+
+    <!-- Simple Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Nova Market"
+                    style="height: 40px; display: inline-block; vertical-align: middle;">
+                <span style="vertical-align: middle;">NOVA<span class="logo__dot"></span> MARKET</span>
+            </a>
+            <a href="index.html" class="btn btn--icon" aria-label="Back">
+                <i class="ph ph-arrow-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="container section product-layout">
+
+        <!-- Product Details / Gallery -->
+        <div class="product-gallery-section">
+            <div class="main-image-wrapper">
+                <img id="main-product-img" src="" alt="Product Image" class="main-product-img">
+            </div>
+            <div class="product-details-text">
+                <span id="product-category" class="product-category-tag"></span>
+                <h1 id="product-title" class="product-page-title">...</h1>
+                <p id="product-price" class="product-page-price">...</p>
+                <p id="product-description" class="product-page-desc">...</p>
+                <div class="product-features-list">
+                    <div class="feature-item"><i class="ph ph-check-circle"></i> ضمان الجودة</div>
+                    <div class="feature-item"><i class="ph ph-check-circle"></i> الدفع عند الاستلام</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Form -->
+        <div class="order-form-section">
+            <div class="form-card">
+                <h2 data-i18n="order_form_title">بيانات الشحن</h2>
+                <p class="form-subtitle" data-i18n="order_form_subtitle">يرجى ملء الاستمارة لتأكيد طلبك</p>
+
+                <form id="order-form" class="order-form">
+                    <div class="form-group">
+                        <label for="fullname" data-i18n="label_name">الاسم الكامل</label>
+                        <div class="input-wrapper">
+                            <i class="ph ph-user input-icon"></i>
+                            <input type="text" id="fullname" required placeholder="مثال: محمد أحمد">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" data-i18n="label_phone">رقم الهاتف</label>
+                        <div class="input-wrapper">
+                            <i class="ph ph-phone input-icon"></i>
+                            <input type="tel" id="phone" required placeholder="05XXXXXXXX">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="wilaya" data-i18n="label_wilaya">الولاية</label>
+                            <div class="input-wrapper">
+                                <i class="ph ph-map-pin input-icon"></i>
+                                <select id="wilaya" required>
+                                    <option value="" disabled selected data-i18n="select_wilaya">اختر الولاية</option>
+                                    <!-- Options injected by JS -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="baladiya" data-i18n="label_baladiya">البلدية</label>
+                            <div class="input-wrapper">
+                                <i class="ph ph-buildings input-icon"></i>
+                                <select id="baladiya" required disabled
+                                    style="width: 100%; padding: 0.9rem; padding-right: 2.5rem; padding-left: 1rem; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+                                    <option value="" disabled selected data-i18n="select_baladiya">اختر البلدية</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" data-i18n="label_address">العنوان بالتفصيل</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="address" placeholder="الحي، رقم المنزل...">
+                        </div>
+                    </div>
+
+                    <!-- Order Summary Mini -->
+                    <div class="order-summary-mini">
+                        <div class="summary-row total-row">
+                            <span data-i18n="total">المجموع:</span>
+                            <span id="summary-total">...</span>
+                        </div>
+                        <p class="shipping-note" data-i18n="shipping_note">+ مصاريف الشحن (تحدد بعد التأكيد)</p>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--block">
+                        <span data-i18n="confirm_btn">تأكيد الطلب</span>
+                        <i class="ph ph-arrow-left"></i>
+                    </button>
+
+                    <p class="trust-msg"><i class="ph ph-lock-key"></i> بياناتك آمنة 100%</p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="locations.js"></script>
+    <script src="script.js?v=2.1"></script>
+</body>
+
+</html>
